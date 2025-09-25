@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ClinicManager — Patient records & Prescription automation for clinics</title>
+<meta name="description" content="ClinicManager: Replace paper with a simple app. One-time setup ₹7,000 (6 months included). Monthly ₹999 from Month 7. Automated prescriptions, appointment tracking & secure cloud records." />
+<style>
+/* Simple modern CSS (mobile-first) */
+:root{
+--accent:#ff8a00;
+--accent-dark:#ff6f00;
+--muted:#6b7280;
+--bg:#fbfbfd;
+--card:#ffffff;
+--maxw:1100px;
+--radius:12px;
+font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+background:linear-gradient(180deg,#fbfbfd,#f7f9fc 60%);
+color:#111827;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+line-height:1.45;
+}
+.wrap{max-width:var(--maxw);margin:30px auto;padding:24px;}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.logo{width:46px;height:46px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+nav{display:flex;gap:12px;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-weight:600}
+.hero{display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px;align-items:center}
+.hero-grid{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:0 6px 30px rgba(10,10,20,0.06)}
+.h1{font-size:28px;margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 18px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{background:var(--accent);color:white;padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(255,138,0,0.18)}
+.btn.secondary{background:transparent;color:var(--accent);border:2px solid #ffe0c7}
+.stat-row{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+.stat{background:#fff;padding:12px 16px;border-radius:10px;min-width:130px;text-align:center;box-shadow:0 3px 10px rgba(10,10,20,0.04)}
+.features{display:grid;grid-template-columns:repeat(1,1fr);gap:14px;margin-top:20px}
+.feature-card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(12,18,33,0.04);display:flex;gap:12px;align-items:flex-start}
+.icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(90deg,#fff,#fff);display:flex;align-items:center;justify-content:center;border:1px solid #f0f0f5}
+.feature-card h4{margin:0 0 6px;font-size:16px}
+.grid-2{display:grid;grid-template-columns:1fr;gap:12px;margin-top:22px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,18,33,0.04)}
+.pricing-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.pricing{flex:1;min-width:240px;padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fff);border:1px solid #f2f4f8}
+.muted{color:var(--muted)}
+.roadmap{display:flex;flex-direction:column;gap:12px}
+.road-block{padding:12px;border-radius:10px;background:#fff;border-left:6px solid var(--accent);box-shadow:0 6px 14px rgba(12,18,33,0.04)}
+.funnel{display:flex;flex-direction:column;gap:6px}
+.fbar{height:52px;border-radius:10px;background:#ffeccf;display:flex;align-items:center;padding:10px 12px;font-weight:700}
+.fbar.small{height:40px}
+.testimonials{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.t{flex:1;min-width:220px;padding:14px;background:#fff;border-radius:10px;box-shadow:0 6px 16px rgba(12,18,33,0.04)}
+form{display:grid;gap:10px}
+input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6e9ef;font-size:15px}
+footer{margin-top:28px;padding:16px 0;color:var(--muted);text-align:center}
+.small{font-size:13px;color:var(--muted)}
+/* responsive */
+@media(min-width:900px){
+.hero{grid-template-columns:1fr 420px}
+.features{grid-template-columns:repeat(2,1fr)}
+.grid-2{grid-template-columns:1fr 420px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<a class="brand" href="#">
+<div class="logo">CM</div>
+<div>
+<div style="font-weight:800">ClinicManager</div>
+<div class="small">Patient records • Auto Prescriptions</div>
+</div>
+</a>
+<nav>
+<a href="#features">Features</a>
+<a href="#pricing">Pricing</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#contact">Book Demo</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-grid">
+<h1 class="h1">Replace paper files with a single app — built for clinics.</h1>
+<p class="lead">One-time setup ₹7,000 (includes 6 months free). Start using today — subscriptions ₹999/month from Month 7. Automated prescriptions, appointment tracking and secure cloud patient records — no IT team required.</p>
+
+<div class="cta-row">
+<a class="btn" href="#contact">Book a Live Demo</a>
+<a class="btn secondary" href="#pricing">See Pricing</a>
+</div>
+
+<div class="stat-row" style="margin-top:16px">
+<div class="stat"><div style="font-size:16px;font-weight:700">₹7,000</div><div class="muted" style="font-size:13px">One-time setup</div></div>
+<div class="stat"><div style="font-size:16px;font-weight:700">6 months</div><div class="muted" style="font-size:13px">Included usage</div></div>
+<div class="stat"><div style="font-size:16px;font-weight:700">₹999</div><div class="muted" style="font-size:13px">Monthly from Month 7</div></div>
+</div>
+
+<div style="display:flex;gap:12px;margin-top:16px;flex-wrap:wrap">
+<div class="small">Ideal for: Dentists • Physios • Dermatologists • Eye Clinics</div>
+<div class="small" style="margin-left:8px">60-day support • Local onboarding</div>
+</div>
+</div>
+
+<!-- Right column: quick demo / image -->
+<div style="display:flex;align-items:flex-start;justify-content:center;">
+<div style="width:100%;max-width:420px">
+<div style="background:linear-gradient(180deg,#fff,#f8fbff);padding:16px;border-radius:12px;box-shadow:0 10px 30px rgba(8,20,40,0.06)">
+<img src="https://via.placeholder.com/380x220.png?text=App+Screenshot" alt="app screenshot" style="width:100%;border-radius:10px;margin-bottom:12px" />
+<div style="display:flex;gap:10px;align-items:center;justify-content:space-between">
+<div>
+<div style="font-weight:800">Live Demo</div>
+<div class="small">See how prescriptions are emailed automatically</div>
+</div>
+<a class="btn" href="#contact" style="padding:8px 12px">Book</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Features -->
+<section id="features" style="margin-top:22px">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<h3 style="margin:0">Key Features</h3>
+<div class="small">Designed for clinics who want zero tech headaches</div>
+</div>
+
+<div class="features">
+<div class="feature-card">
+<div class="icon">📂</div>
+<div>
+<h4>Secure Cloud Records</h4>
+<div class="muted">Access patient files from any device — backed up automatically.</div>
+</div>
+</div>
+
+<div class="feature-card">
+<div class="icon">📧</div>
+<div>
+<h4>Automated Prescription Emails</h4>
+<div class="muted">Send prescription PDFs to patients instantly — no handwriting, no errors.</div>
+</div>
+</div>
+
+<div class="feature-card">
+<div class="icon">📅</div>
+<div>
+<h4>Appointments & Follow-ups</h4>
+<div class="muted">Track visits, follow-up reminders and patient history in one place.</div>
+</div>
+</div>
+
+<div class="feature-card">
+<div class="icon">⚡</div>
+<div>
+<h4>Zero-IT Onboarding</h4>
+<div class="muted">We set everything up for you and train staff — you focus on patients.</div>
+</div>
+</div>
+
+<div class="feature-card">
+<div class="icon">🔒</div>
+<div>
+<h4>Privacy & Compliance</h4>
+<div class="muted">Basic security & backups included. (We can advise on clinic-specific compliance).</div>
+</div>
+</div>
+
+<div class="feature-card">
+<div class="icon">🤝</div>
+<div>
+<h4>Referral & Support</h4>
+<div class="muted">Referral discounts + local onboarding support & 60-day bug-fix guarantee.</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Pricing + CTA -->
+<section id="pricing" style="margin-top:24px">
+<div class="grid-2">
+<div class="card">
+<h3 style="margin-top:0">Pricing & What you get</h3>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+<div style="flex:1;min-width:200px" class="pricing">
+<div style="font-weight:800;font-size:18px">One-time Setup</div>
+<div class="small">₹7,000</div>
+<ul style="margin:8px 0 0 18px;color:var(--muted)">
+<li>Full app setup & Google Sheets integration</li>
+<li>6 months free usage included</li>
+<li>Training for staff + 60-day bug fixes</li>
+</ul>
+</div>
+
+<div style="flex:1;min-width:200px" class="pricing">
+<div style="font-weight:800;font-size:18px">Subscription</div>
+<div class="small">₹999 / month (starts Month 7)</div>
+<ul style="margin:8px 0 0 18px;color:var(--muted)">
+<li>Cloud access, automated emails</li>
+<li>Priority support & backups</li>
+<li>Optional add-ons (SMS, labs, teleconsult)</li>
+</ul>
+</div>
+</div>
+
+<div style="margin-top:12px" class="small muted">Notes: Setup fee covers onboarding, configuration & 6 months of usage. Subscriptions are auto-billed from month 7 unless you cancel.</div>
+
+<div style="margin-top:14px">
+<a class="btn" href="#contact">Start Onboarding</a>
+<a class="btn secondary" href="#roadmap" style="margin-left:8px">See Roadmap</a>
+</div>
+</div>
+
+<div class="card">
+<h3 style="margin-top:0">Why this model?</h3>
+<p class="muted">Doctors avoid recurring monthly commitment during the initial trial period — they pay once and use for 6 months. You get strong adoption and time to prove ROI.</p>
+
+<h4 style="margin-top:12px">Customer Acquisition (Ads)</h4>
+<p class="muted">We recommend starting with ₹15k—₹30k/month in ads with a CAC target of <strong>₹100–₹300 per clinic</strong> using Facebook/Instagram + Google Search + WhatsApp outreach.</p>
+
+<div style="display:flex;gap:10px;margin-top:12px">
+<div class="card" style="padding:10px">
+<div style="font-weight:800">Setup Revenue</div>
+<div class="small">Example: 200 clinics → ₹14,00,000</div>
+</div>
+<div class="card" style="padding:10px">
+<div style="font-weight:800">Subscriptions</div>
+<div class="small">From M7: 150 clinics × ₹999 ≈ ₹1.5L/month</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Roadmap -->
+<section id="roadmap" style="margin-top:20px">
+<h3>12-Month Roadmap (high level)</h3>
+<div class="roadmap" style="margin-top:10px">
+<div class="road-block">
+<strong>Phase 1 (Month 1–2)</strong> — Validation & Trust: Run pilot with 10–20 clinics. Collect testimonials, fix workflow issues, create demo assets.
+</div>
+<div class="road-block">
+<strong>Phase 2 (Month 3–6)</strong> — Expansion: Ramp ads & partnerships. Aim for 80 clinics. Build case studies and referral program.
+</div>
+<div class="road-block">
+<strong>Phase 3 (Month 7–12)</strong> — Scale: Pan-India outreach, Google Search ads, convert to subscriptions and focus on retention & upsells.
+</div>
+</div>
+</section>
+
+<!-- Sales Funnel -->
+<section style="margin-top:18px">
+<h3>Sales Funnel (monthly example)</h3>
+<div class="card" style="margin-top:10px">
+<div class="funnel">
+<div class="fbar" style="width:100%">Leads Generated — 1,000 (Ads + Outreach)</div>
+<div class="fbar" style="width:60%;background:#cfe8ff">Leads Contacted — 600 (WhatsApp & Calls)</div>
+<div class="fbar small" style="width:24%;background:#c8f7d1">Demos Scheduled — 240</div>
+<div class="fbar small" style="width:19%;background:#ffd6ea">Demos Completed — 192</div>
+<div class="fbar small" style="width:5%;background:#e1d6ff">Conversions — 40–60 (Paid)</div>
+</div>
+<div style="margin-top:12px" class="small muted">Conversion rates in example: contact 60% → demo schedule 40% → demo completion 80% → conversion 20–25%.</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section style="margin-top:18px">
+<h3>What early users say</h3>
+<div class="testimonials">
+<div class="t">
+<strong>Dr. A. Kulkarni (Dentist)</strong>
+<p class="muted">“Switching from paper saved our clinic ~1 hour/day. Sending prescriptions by email reduced mistakes.”</p>
+</div>
+<div class="t">
+<strong>Dr. P. Mehta (Physio)</strong>
+<p class="muted">“Setup was quick. Team trained our staff in one session. Great support.”</p>
+</div>
+<div class="t">
+<strong>Dr. S. Rao (Dermatologist)</strong>
+<p class="muted">“Patients appreciate emailed records. Referral program brought 2 new clinics.”</p>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section style="margin-top:18px">
+<h3>FAQ</h3>
+<div style="display:grid;gap:10px;margin-top:8px">
+<div class="card" style="padding:12px">
+<strong>What is included in the ₹7,000 setup?</strong>
+<p class="muted">Full app setup, data mapping (existing records), staff training, and 6 months of updates & bug fixes.</p>
+</div>
+<div class="card" style="padding:12px">
+<strong>When will subscriptions start?</strong>
+<p class="muted">Subscription billing begins on Month 7 after onboarding (₹999/month per clinic). We provide reminders and a grace period before billing starts.</p>
+</div>
+<div class="card" style="padding:12px">
+<strong>What if I need custom fields or reports?</strong>
+<p class="muted">Basic customizations are included in setup. Larger custom feature requests can be scoped and quoted separately.</p>
+</div>
+</div>
+</section>
+
+<!-- Contact / Book Demo -->
+<section id="contact" style="margin-top:20px">
+<h3>Book a Live Demo</h3>
+<div class="grid-2" style="margin-top:10px">
+<div class="card">
+<p class="muted">Leave your details and we'll schedule a 15-minute demo. We'll show you how the app sends prescriptions automatically and stores patient history securely.</p>
+<form action="mailto:hello@clinicmanager.example?subject=Demo%20Request" method="post" enctype="text/plain">
+<input type="text" name="Name" placeholder="Your name (Doctor / Clinic admin)" required />
+<input type="tel" name="Phone" placeholder="Phone (WhatsApp preferred)" required />
+<input type="email" name="Email" placeholder="Email" required />
+<input type="text" name="Clinic" placeholder="Clinic name & city" />
+<select name="PreferredTime">
+<option value="">Preferred demo time</option>
+<option>Weekdays 11:00 - 13:00</option>
+<option>Weekdays 17:00 - 19:00</option>
+<option>Weekend 10:00 - 12:00</option>
+</select>
+<textarea name="Notes" rows="3" placeholder="Any quick notes (optional)"></textarea>
+<div style="display:flex;gap:10px;margin-top:8px">
+<button class="btn" type="submit">Request Demo</button>
+<a class="btn secondary" href="tel:+919xxxxxxxxx">Call us</a>
+</div>
+</form>
+</div>
+
+<div class="card">
+<h4 style="margin-top:0">Need quick answers?</h4>
+<p class="muted">Call: <a href="tel:+919xxxxxxxxx">+91 XXXXXXXXXX</a></p>
+<p class="muted">Email: <a href="mailto:hello@clinicmanager.example">hello@clinicmanager.example</a></p>
+<div style="margin-top:14px">
+<strong>Fast facts</strong>
+<ul style="margin:8px 0 0 18px;color:var(--muted)">
+<li>Setup in 1–3 business days</li>
+<li>Free updates for 6 months</li>
+<li>Local onboarding & training included</li>
+</ul>
+</div>
+<div style="margin-top:12px">
+<a class="btn" href="#pricing">Pay ₹7,000 Now</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="small muted">© <strong>ClinicManager</strong> — Built & supported by Gazing Media. Terms & Privacy apply.</div>
+</footer>
+</div>
+</body>
+</html>
