@@ -1,10 +1,7 @@
-- 👋 Hi, I’m @yasharma1124
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-
-<!---
-yasharma1124/yasharma1124 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+👋 Hi, I'm Yash Sharma
+🏢 Founder @ Gazing Media & AirBillz
+💼 Built AirBillz — a CRM & billing platform for businesses
+🏥 Developed EMR software & healthcare platforms for clinical use
+💘 Created Rovr — a modern dating application
+🌐 Full-stack developer | Flutter · Firebase · Web
+🚀 I build products from 0 → 1
